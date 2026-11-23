@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Demande envoyée · Larkline</title>
+  <meta name="description" content="Votre demande d'estimation est bien arrivée. L'agent de votre quartier vous rappelle personnellement.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,600;9..40,700&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+
+  <!-- ===================== Header ===================== -->
+  <header class="site-header boxed-l flex-row flex-align-center flex-justify-between gap-24">
+    <a class="logo" href="index.html" aria-label="Larkline, accueil">
+      <img src="images/larkline-logo.svg" alt="Larkline" width="169" height="36">
+    </a>
+    <input class="nav-toggle" type="checkbox" id="nav-toggle" aria-label="Ouvrir le menu">
+    <label class="nav-burger" for="nav-toggle" aria-hidden="true"><span></span><span></span><span></span></label>
+    <nav class="nav-menu gap-32" aria-label="Navigation principale">
+      <ul class="nav-links gap-24">
+        <li><a class="nav-link" href="biens.html">Acheter</a></li>
+        <li><a class="nav-link" href="index.html#vendre">Vendre</a></li>
+        <li><a class="nav-link" href="index.html#quartiers">Quartiers</a></li>
+        <li><a class="nav-link" href="equipe.html">L'équipe</a></li>
+        <li><a class="nav-link" href="journal.html">Journal</a></li>
+      </ul>
+      <a class="nav-phone" href="tel:+33465710100">04 65 71 01 00</a>
+      <a class="btn-outline" href="estimation.html" aria-current="page">Faire estimer mon bien</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="bg-light-2 boxed-s pad-tb-128 flex-column flex-align-center gap-24 text-center fade-up" aria-labelledby="merci-title">
+      <span class="success-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span>
+      <h1 id="merci-title" class="title-2 heading-on-light">Merci, votre demande est bien&nbsp;arrivée.</h1>
+      <p class="body-l body-on-light max-text">L'agent qui connaît votre quartier vous rappelle personnellement, au créneau que vous avez choisi. Votre demande lui est attribuée et suivie jusqu'à la réponse.</p>
+      <div class="card pad-32 flex-column gap-16 text-start">
+        <p class="sub-title subtitle-on-light">La suite</p>
+        <ol class="flex-column gap-16">
+          <li class="flex-row gap-16 flex-align-start"><span class="step-number">1</span><p class="body-m body-on-light"><strong class="heading-on-light">Un appel</strong> pour faire connaissance et fixer un rendez-vous.</p></li>
+          <li class="flex-row gap-16 flex-align-start"><span class="step-number">2</span><p class="body-m body-on-light"><strong class="heading-on-light">Une visite</strong> de votre bien, à l'heure qui vous convient.</p></li>
+          <li class="flex-row gap-16 flex-align-start"><span class="step-number">3</span><p class="body-m body-on-light"><strong class="heading-on-light">Un prix argumenté</strong>, ventes récentes de la rue à l'appui.</p></li>
+        </ol>
+      </div>
+      <div class="flex-row flex-wrap flex-justify-center flex-align-center gap-24">
+        <a class="btn-solid" href="equipe.html">Découvrir l'équipe</a>
+        <a class="text-link link-on-light" href="biens.html">Voir les biens à vendre</a>
+      </div>
+      <p class="body-s detail-on-light">Une urgence ? Appelez le bureau au <a class="text-link link-on-light" href="tel:+33465710100">04 65 71 01 00</a>.</p>
+    </section>
+  </main>
+
+  <!-- ===================== Footer ===================== -->
+  <footer class="bg-light-1 boxed-l">
+    <div class="grid-4 gap-40 pad-tb-48">
+      <div class="flex-column gap-16">
+        <a class="logo" href="index.html" aria-label="Larkline, accueil"><img src="images/larkline-logo.svg" alt="Larkline" width="169" height="36"></a>
+        <p class="body-s detail-on-light">Agence immobilière à Nice. Vente uniquement, un agent par client.</p>
+      </div>
+      <div class="flex-column gap-12">
+        <p class="sub-title subtitle-on-light">Le bureau</p>
+        <p class="body-m body-on-light">Rue de la Préfecture<br>06300 Nice, Vieux Nice</p>
+        <p class="body-s detail-on-light">Du lundi au vendredi, 9 h 00 à 18 h 00</p>
+      </div>
+      <div class="flex-column gap-12">
+        <p class="sub-title subtitle-on-light">Contact</p>
+        <a class="footer-link body-m" href="tel:+33465710100">04 65 71 01 00</a>
+        <a class="footer-link body-m" href="mailto:hello@larkline.example">hello@larkline.example</a>
+      </div>
+      <div class="flex-column gap-12">
+        <p class="sub-title subtitle-on-light">Le site</p>
+        <a class="footer-link body-m" href="biens.html">Biens à vendre</a>
+        <a class="footer-link body-m" href="estimation.html">Estimer mon bien</a>
+        <a class="footer-link body-m" href="equipe.html">L'équipe</a>
+        <a class="footer-link body-m" href="journal.html">Journal</a>
+      </div>
+    </div>
+    <div class="footer-bottom pad-tb-24 flex-row flex-wrap flex-justify-between gap-16 body-s detail-on-light">
+      <p>© 2026 Larkline Estates. Agence fictive, prototype v2.</p>
+      <p><a class="footer-link" href="mentions-legales.html">Mentions légales</a> · <a class="footer-link" href="confidentialite.html">Confidentialité</a> · <a class="footer-link" href="honoraires.html">Barème des honoraires</a></p>
+    </div>
+  </footer>
+
+</body>
+</html>

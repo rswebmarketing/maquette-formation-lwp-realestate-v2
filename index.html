@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Larkline · Agence immobilière à Nice, depuis le Vieux Nice</title>
+  <meta name="description" content="Petite agence immobilière du Vieux Nice. Un seul agent vous accompagne, du premier café à la signature chez le notaire. Estimation de votre bien et biens à vendre dans douze quartiers de Nice.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,600;9..40,700&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+
+  <!-- ===================== Header ===================== -->
+  <header class="site-header boxed-l flex-row flex-align-center flex-justify-between gap-24">
+    <a class="logo" href="index.html" aria-label="Larkline, accueil">
+      <img src="images/larkline-logo.svg" alt="Larkline" width="169" height="36">
+    </a>
+    <input class="nav-toggle" type="checkbox" id="nav-toggle" aria-label="Ouvrir le menu">
+    <label class="nav-burger" for="nav-toggle" aria-hidden="true"><span></span><span></span><span></span></label>
+    <nav class="nav-menu gap-32" aria-label="Navigation principale">
+      <ul class="nav-links gap-24">
+        <li><a class="nav-link" href="biens.html">Acheter</a></li>
+        <li><a class="nav-link" href="#vendre">Vendre</a></li>
+        <li><a class="nav-link" href="#quartiers">Quartiers</a></li>
+        <li><a class="nav-link" href="equipe.html">L'équipe</a></li>
+        <li><a class="nav-link" href="journal.html">Journal</a></li>
+      </ul>
+      <a class="nav-phone" href="tel:+33465710100">04 65 71 01 00</a>
+      <a class="btn-solid" href="estimation.html">Faire estimer mon bien</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ===================== Hero ===================== -->
+    <section class="bg-light-1 boxed-l pad-tb-64 flex-column gap-40" aria-labelledby="hero-title">
+      <div class="hero-intro gap-40">
+        <div class="flex-column gap-20 fade-up">
+          <p class="sub-title subtitle-on-light">Agence immobilière · Vieux Nice</p>
+          <h1 id="hero-title" class="title-1 heading-on-light">On connaît Nice, rue par&nbsp;rue.</h1>
+        </div>
+        <div class="flex-column gap-24 fade-up delay-1">
+          <p class="body-l body-on-light">Nous vendons des appartements et des maisons dans douze quartiers de Nice. Un seul agent vous suit, du premier café à la signature chez le&nbsp;notaire.</p>
+          <div class="flex-row flex-wrap flex-align-center gap-24">
+            <a class="btn-solid" href="estimation.html">Faire estimer mon bien</a>
+            <a class="text-link link-on-light" href="biens.html">Voir les biens à vendre</a>
+          </div>
+        </div>
+      </div>
+      <!-- Slideshow: one neighborhood every 4 seconds (CSS only) -->
+      <div class="hero-media media rounded-l fade-up delay-2" role="region" aria-roledescription="diaporama" aria-label="Les quartiers de Nice">
+          <div class="hero-slide">
+            <img src="https://images.unsplash.com/photo-1490113355845-cdc3b65f0189?auto=format&fit=crop&w=2200&h=1100&q=80" alt="Une ruelle animée du Vieux Nice, terrasses et façades ocre" fetchpriority="high">
+            <p class="hero-caption body-s pad-tb-8 pad-lr-16 rounded-full">Vieux Nice</p>
+          </div>
+          <div class="hero-slide">
+            <img src="https://images.unsplash.com/photo-1688993742358-516669227e6c?auto=format&fit=crop&w=2200&h=1100&q=80" alt="Le port Lympia et ses bateaux, la colline du Mont Boron derrière" loading="lazy">
+            <p class="hero-caption body-s pad-tb-8 pad-lr-16 rounded-full">Le Port et le Mont Boron</p>
+          </div>
+          <div class="hero-slide">
+            <img src="https://images.unsplash.com/photo-1728128527807-6297bc0e7d66?auto=format&fit=crop&w=2200&h=1100&q=80" alt="Passants sur la place Masséna et ses façades rouges" loading="lazy">
+            <p class="hero-caption body-s pad-tb-8 pad-lr-16 rounded-full">Jean Médecin et la place Masséna</p>
+          </div>
+          <div class="hero-slide">
+            <img src="https://images.unsplash.com/photo-1728128528288-421e94139e16?auto=format&fit=crop&w=2200&h=1100&q=80" alt="Immeuble aux balcons arrondis dans le centre de Nice" loading="lazy">
+            <p class="hero-caption body-s pad-tb-8 pad-lr-16 rounded-full">Carré d'Or</p>
+          </div>
+          <div class="hero-slide">
+            <img src="https://images.unsplash.com/photo-1694424409051-65aa07593fcf?auto=format&fit=crop&w=2200&h=1100&q=80" alt="Immeuble Belle Époque à tourelle" loading="lazy">
+            <p class="hero-caption body-s pad-tb-8 pad-lr-16 rounded-full">Cimiez et ses immeubles Belle Époque</p>
+          </div>
+      </div>
+      <ul class="grid-4 gap-24" aria-label="Larkline en bref">
+        <li class="fact pad-tb-20 flex-column gap-4">
+          <span class="fact-number title-4 heading-on-light" data-count>9 ans</span>
+          <span class="body-s detail-on-light">à Nice, depuis notre bureau du Vieux Nice</span>
+        </li>
+        <li class="fact pad-tb-20 flex-column gap-4">
+          <span class="fact-number title-4 heading-on-light" data-count>12 quartiers</span>
+          <span class="body-s detail-on-light">partagés entre quatre agents</span>
+        </li>
+        <li class="fact pad-tb-20 flex-column gap-4">
+          <span class="fact-number title-4 heading-on-light" data-count>1 agent</span>
+          <span class="body-s detail-on-light">votre seul interlocuteur, du début à la fin</span>
+        </li>
+        <li class="fact pad-tb-20 flex-column gap-4">
+          <span class="fact-number title-4 heading-on-light" data-count>100 % vente</span>
+          <span class="body-s detail-on-light">nous ne faisons pas de location</span>
+        </li>
+      </ul>
+    </section>
+
+    <!-- ===================== Vendre ===================== -->
+    <section id="vendre" class="bg-light-2 boxed-l pad-tb-128 grid-split-r gap-40 flex-align-center reveal" aria-labelledby="vendre-title">
+      <div class="flex-column gap-32">
+        <div class="flex-column gap-16">
+          <p class="sub-title subtitle-on-light">Vendre avec Larkline</p>
+          <h2 id="vendre-title" class="title-2 heading-on-light">Avant de vendre, sachez ce que vaut vraiment votre&nbsp;bien.</h2>
+          <p class="body-l body-on-light">L'agent qui connaît votre quartier vient voir votre bien et vous explique son prix, ventes récentes de la rue à&nbsp;l'appui.</p>
+        </div>
+        <ol class="flex-column gap-20">
+          <li class="flex-row gap-16 flex-align-start">
+            <span class="step-number">1</span>
+            <div class="flex-column gap-4">
+              <h3 class="title-6 heading-on-light">Vous décrivez votre bien</h3>
+              <p class="body-m body-on-light">Adresse, type et surface : trois questions, deux minutes.</p>
+            </div>
+          </li>
+          <li class="flex-row gap-16 flex-align-start">
+            <span class="step-number">2</span>
+            <div class="flex-column gap-4">
+              <h3 class="title-6 heading-on-light">L'agent de votre quartier vous rappelle</h3>
+              <p class="body-m body-on-light">Chaque demande lui est attribuée et suivie jusqu'à la réponse. Aucune ne reste dans une boîte mail.</p>
+            </div>
+          </li>
+          <li class="flex-row gap-16 flex-align-start">
+            <span class="step-number">3</span>
+            <div class="flex-column gap-4">
+              <h3 class="title-6 heading-on-light">Il passe chez vous et vous donne un prix argumenté</h3>
+              <p class="body-m body-on-light">Puis, si vous le souhaitez, il s'occupe de la vente jusqu'à la signature chez le notaire.</p>
+            </div>
+          </li>
+        </ol>
+        <div class="flex-row flex-wrap flex-align-center gap-24">
+          <a class="btn-solid" href="estimation.html">Faire estimer mon bien</a>
+          <a class="text-link link-on-light" href="tel:+33465710100">Ou appelez le 04 65 71 01 00</a>
+        </div>
+      </div>
+      <div class="office-figure order-first-m">
+        <figure class="media ratio-4-3 rounded-l">
+          <img src="images/bureau-larkline.jpg" alt="L'équipe Larkline au travail dans le bureau de l'agence" loading="lazy">
+        </figure>
+        <blockquote class="office-quote card shadow-m pad-32 flex-column gap-16">
+          <p class="title-6 heading-on-light use-heading-font">« J'ai quitté une grande agence parce que les clients passaient de main en main. Ici, on prend moins de clients pour vraiment les&nbsp;accompagner. »</p>
+          <footer class="flex-row flex-align-center gap-12">
+            <img class="avatar-s" src="https://images.pexels.com/photos/13743891/pexels-photo-13743891.jpeg?auto=compress&cs=tinysrgb&w=320" alt="" loading="lazy">
+            <span class="body-s detail-on-light"><strong class="heading-on-light">Claire Morgan</strong>, fondatrice de Larkline</span>
+          </footer>
+        </blockquote>
+      </div>
+    </section>
+
+    <!-- ===================== Biens à vendre ===================== -->
+    <section id="biens" class="bg-light-1 boxed-l pad-tb-128 flex-column gap-40 reveal" aria-labelledby="biens-title">
+      <div class="flex-row flex-wrap flex-align-end flex-justify-between gap-24">
+        <div class="flex-column gap-16 max-text-l">
+          <p class="sub-title subtitle-on-light">À vendre en ce moment</p>
+          <h2 id="biens-title" class="title-2 heading-on-light">Des biens choisis, et un agent qui les connaît par&nbsp;cœur.</h2>
+        </div>
+        <div class="flex-row flex-align-center gap-24">
+          <a class="text-link link-on-light" href="biens.html">Voir les 8 biens à vendre</a>
+          <div class="flex-row gap-8">
+            <button class="icon-button" type="button" data-carousel-prev aria-controls="biens-scroller" aria-label="Biens précédents"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M20 12H4M10 6l-6 6 6 6"/></svg></button>
+            <button class="icon-button" type="button" data-carousel-next aria-controls="biens-scroller" aria-label="Biens suivants"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 12h16M14 6l6 6-6 6"/></svg></button>
+          </div>
+        </div>
+      </div>
+
+      <div class="scroller gap-24" id="biens-scroller" role="list" tabindex="0" aria-label="Biens à vendre">
+        <a class="property-card card flex-column" href="bien-loft-vieux-nice.html" role="listitem">
+          <div class="media ratio-4-3">
+            <img src="https://images.pexels.com/photos/7174386/pexels-photo-7174386.jpeg?auto=compress&cs=tinysrgb&w=900" alt="Séjour lumineux sous poutres apparentes avec mezzanine" loading="lazy">
+            <span class="badge-2 media-badge">À vendre</span>
+          </div>
+          <div class="grow pad-24 flex-column gap-12">
+            <p class="body-s detail-on-light">Vieux Nice · Rue de la Préfecture</p>
+            <h3 class="title-6 heading-on-light">Loft dans les ruelles du Vieux&nbsp;Nice</h3>
+            <ul class="meta-list body-s flex-row flex-wrap gap-12"><li>3 chambres</li><li>2 salles de bain</li><li>195 m²</li></ul>
+            <div class="flex-row flex-align-center flex-justify-between gap-12 push-end">
+              <p class="price">1 350 000 €</p>
+              <span class="flex-row flex-align-center gap-8 body-s detail-on-light"><img class="avatar-s" src="https://images.pexels.com/photos/37842959/pexels-photo-37842959.jpeg?auto=compress&cs=tinysrgb&w=320" alt="" loading="lazy">Daniel</span>
+            </div>
+          </div>
+        </a>
+        <a class="property-card card flex-column" href="bien-loft-vieux-nice.html" role="listitem">
+          <div class="media ratio-4-3">
+            <img src="https://images.unsplash.com/photo-1505409628601-edc9af17fda6?auto=format&fit=crop&w=900&h=675&q=80" alt="Salle à manger avec moulures, parquet et grandes fenêtres" loading="lazy">
+            <span class="badge-2 media-badge">À vendre</span>
+          </div>
+          <div class="grow pad-24 flex-column gap-12">
+            <p class="body-s detail-on-light">Cimiez · Boulevard de Cimiez</p>
+            <h3 class="title-6 heading-on-light">Appartement Belle Époque à&nbsp;Cimiez</h3>
+            <ul class="meta-list body-s flex-row flex-wrap gap-12"><li>3 chambres</li><li>2 salles de bain</li><li>172 m²</li></ul>
+            <div class="flex-row flex-align-center flex-justify-between gap-12 push-end">
+              <p class="price">1 050 000 €</p>
+              <span class="flex-row flex-align-center gap-8 body-s detail-on-light"><img class="avatar-s" src="https://images.pexels.com/photos/27086761/pexels-photo-27086761.jpeg?auto=compress&cs=tinysrgb&w=320" alt="" loading="lazy">Priya</span>
+            </div>
+          </div>
+        </a>
+        <a class="property-card card flex-column" href="bien-loft-vieux-nice.html" role="listitem">
+          <div class="media ratio-4-3">
+            <img src="https://images.pexels.com/photos/25323129/pexels-photo-25323129.jpeg?auto=compress&cs=tinysrgb&w=900" alt="Villa Belle Époque blanche entourée de palmiers" loading="lazy">
+            <span class="badge-2 media-badge">À vendre</span>
+          </div>
+          <div class="grow pad-24 flex-column gap-12">
+            <p class="body-s detail-on-light">Baumettes · Avenue des Baumettes</p>
+            <h3 class="title-6 heading-on-light">Villa Belle Époque aux&nbsp;Baumettes</h3>
+            <ul class="meta-list body-s flex-row flex-wrap gap-12"><li>4 chambres</li><li>4 salles de bain</li><li>297 m²</li></ul>
+            <div class="flex-row flex-align-center flex-justify-between gap-12 push-end">
+              <p class="price">2 650 000 €</p>
+              <span class="flex-row flex-align-center gap-8 body-s detail-on-light"><img class="avatar-s" src="https://images.pexels.com/photos/785667/pexels-photo-785667.jpeg?auto=compress&cs=tinysrgb&w=320" alt="" loading="lazy">Sofia</span>
+            </div>
+          </div>
+        </a>
+        <a class="property-card card flex-column" href="bien-loft-vieux-nice.html" role="listitem">
+          <div class="media ratio-4-3">
+            <img src="https://images.unsplash.com/photo-1760204741315-abfc98ce3bf5?auto=format&fit=crop&w=900&h=675&q=80" alt="Chambre ouverte sur la mer par une grande baie vitrée" loading="lazy">
+            <span class="badge-2 media-badge">À vendre</span>
+          </div>
+          <div class="grow pad-24 flex-column gap-12">
+            <p class="body-s detail-on-light">Mont Boron · Boulevard Carnot</p>
+            <h3 class="title-6 heading-on-light">Appartement vue mer au Mont&nbsp;Boron</h3>
+            <ul class="meta-list body-s flex-row flex-wrap gap-12"><li>1 chambre</li><li>1 salle de bain</li><li>72 m²</li></ul>
+            <div class="flex-row flex-align-center flex-justify-between gap-12 push-end">
+              <p class="price">685 000 €</p>
+              <span class="flex-row flex-align-center gap-8 body-s detail-on-light"><img class="avatar-s" src="https://images.pexels.com/photos/37842959/pexels-photo-37842959.jpeg?auto=compress&cs=tinysrgb&w=320" alt="" loading="lazy">Daniel</span>
+            </div>
+          </div>
+        </a>
+        <a class="property-card card flex-column" href="bien-loft-vieux-nice.html" role="listitem">
+          <div class="media ratio-4-3">
+            <img src="https://images.pexels.com/photos/31405348/pexels-photo-31405348.jpeg?auto=compress&cs=tinysrgb&w=900" alt="Maison aux volets bleus et façade crème" loading="lazy">
+            <span class="badge-2 media-badge">À vendre</span>
+          </div>
+          <div class="grow pad-24 flex-column gap-12">
+            <p class="body-s detail-on-light">Libération · Avenue Borriglione</p>
+            <h3 class="title-6 heading-on-light">Maison de ville à&nbsp;Libération</h3>
+            <ul class="meta-list body-s flex-row flex-wrap gap-12"><li>5 chambres</li><li>3 salles de bain</li><li>334 m²</li></ul>
+            <div class="flex-row flex-align-center flex-justify-between gap-12 push-end">
+              <p class="price">1 790 000 €</p>
+              <span class="flex-row flex-align-center gap-8 body-s detail-on-light"><img class="avatar-s" src="https://images.pexels.com/photos/13801445/pexels-photo-13801445.jpeg?auto=compress&cs=tinysrgb&w=320" alt="" loading="lazy">Marcus</span>
+            </div>
+          </div>
+        </a>
+        <a class="property-card card flex-column" href="bien-loft-vieux-nice.html" role="listitem">
+          <div class="media ratio-4-3">
+            <img src="https://images.pexels.com/photos/8089269/pexels-photo-8089269.jpeg?auto=compress&cs=tinysrgb&w=900" alt="Grand séjour avec mur de briques et canapé blanc" loading="lazy">
+            <span class="badge-2 media-badge">À vendre</span>
+          </div>
+          <div class="grow pad-24 flex-column gap-12">
+            <p class="body-s detail-on-light">Riquier · Boulevard de Riquier</p>
+            <h3 class="title-6 heading-on-light">Loft dans un ancien&nbsp;atelier</h3>
+            <ul class="meta-list body-s flex-row flex-wrap gap-12"><li>2 chambres</li><li>2 salles de bain</li><li>144 m²</li></ul>
+            <div class="flex-row flex-align-center flex-justify-between gap-12 push-end">
+              <p class="price">745 000 €</p>
+              <span class="flex-row flex-align-center gap-8 body-s detail-on-light"><img class="avatar-s" src="https://images.pexels.com/photos/785667/pexels-photo-785667.jpeg?auto=compress&cs=tinysrgb&w=320" alt="" loading="lazy">Sofia</span>
+            </div>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <!-- ===================== Quartiers ===================== -->
+    <section id="quartiers" class="bg-light-2 boxed-l pad-tb-128 flex-column gap-40 reveal" aria-labelledby="quartiers-title">
+      <div class="grid-2 gap-40 flex-align-end">
+        <div class="flex-column gap-16">
+          <p class="sub-title subtitle-on-light">Nos quartiers</p>
+          <h2 id="quartiers-title" class="title-2 heading-on-light">Douze quartiers que l'on arpente chaque&nbsp;jour.</h2>
+        </div>
+        <p class="body-l body-on-light">Chaque agent s'occupe de trois quartiers et y connaît les immeubles, les rues calmes et les prix réels. Choisir un quartier, c'est aussi choisir la personne qui vous&nbsp;guide.</p>
+      </div>
+
+      <div class="mosaic gap-16">
+        <a class="mosaic-tile mosaic-feature media rounded-l zoom-on-hover" href="biens.html?quartier=vieux-nice">
+          <img src="https://images.unsplash.com/photo-1714664857050-8ec9465f1068?auto=format&fit=crop&w=1400&h=1100&q=80" alt="Ruelle étroite du Vieux Nice avec terrasse et scooter garé" loading="lazy">
+          <div class="mosaic-label pad-32 flex-column gap-8">
+            <span class="badge-2">Avec Daniel</span>
+            <h3 class="title-4 heading-on-dark">Vieux Nice</h3>
+            <p class="body-m body-on-dark max-text">Ruelles piétonnes, le marché du cours Saleya au réveil et la mer au bout de la&nbsp;rue.</p>
+          </div>
+        </a>
+        <a class="mosaic-tile media rounded-l zoom-on-hover" href="biens.html?quartier=le-port">
+          <img src="https://images.unsplash.com/photo-1655796089432-7aac214b58eb?auto=format&fit=crop&w=800&h=700&q=80" alt="Le port Lympia, ses bateaux et les façades colorées du quai" loading="lazy">
+          <div class="mosaic-label pad-24 flex-column gap-4">
+            <h3 class="title-6 heading-on-dark">Le Port</h3>
+            <p class="body-s body-on-dark">Antiquaires et terrasses autour du port Lympia. Avec Daniel.</p>
+          </div>
+        </a>
+        <a class="mosaic-tile media rounded-l zoom-on-hover" href="biens.html?quartier=carre-d-or">
+          <img src="https://images.unsplash.com/photo-1536522803715-161ba18e0574?auto=format&fit=crop&w=800&h=700&q=80" alt="Façade ocre à balcons en fer forgé" loading="lazy">
+          <div class="mosaic-label pad-24 flex-column gap-4">
+            <h3 class="title-6 heading-on-dark">Carré d'Or</h3>
+            <p class="body-s body-on-dark">Immeubles bourgeois entre la place Masséna et la Promenade. Avec Priya.</p>
+          </div>
+        </a>
+        <a class="mosaic-tile media rounded-l zoom-on-hover" href="biens.html?quartier=cimiez">
+          <img src="https://images.unsplash.com/photo-1668887465040-2e903c8abf01?auto=format&fit=crop&w=800&h=700&q=80" alt="Immeuble Belle Époque blanc aux balcons filants" loading="lazy">
+          <div class="mosaic-label pad-24 flex-column gap-4">
+            <h3 class="title-6 heading-on-dark">Cimiez</h3>
+            <p class="body-s body-on-dark">Colline résidentielle, arènes romaines et musée Matisse. Avec Priya.</p>
+          </div>
+        </a>
+        <a class="mosaic-tile media rounded-l zoom-on-hover" href="biens.html?quartier=jean-medecin">
+          <img src="https://images.unsplash.com/photo-1728128528035-09f8f26d2441?auto=format&fit=crop&w=800&h=700&q=80" alt="Arcades rouges de la place Masséna" loading="lazy">
+          <div class="mosaic-label pad-24 flex-column gap-4">
+            <h3 class="title-6 heading-on-dark">Jean Médecin</h3>
+            <p class="body-s body-on-dark">Le cœur commerçant, le tram et la place Masséna. Avec Marcus.</p>
+          </div>
+        </a>
+        <a class="mosaic-tile media rounded-l zoom-on-hover" href="biens.html?quartier=baumettes">
+          <img src="https://images.unsplash.com/photo-1645086756889-4fd7af0acd1a?auto=format&fit=crop&w=800&h=700&q=80" alt="Façade rose aux volets verts typiquement niçoise" loading="lazy">
+          <div class="mosaic-label pad-24 flex-column gap-4">
+            <h3 class="title-6 heading-on-dark">Baumettes</h3>
+            <p class="body-s body-on-dark">Villas et jardins à deux pas de la Promenade. Avec Sofia.</p>
+          </div>
+        </a>
+      </div>
+
+      <div class="flex-row flex-wrap flex-align-center gap-12">
+        <span class="body-s detail-on-light">Et aussi :</span>
+        <a class="chip" href="biens.html?quartier=mont-boron">Mont Boron</a>
+        <a class="chip" href="biens.html?quartier=musiciens">Musiciens</a>
+        <a class="chip" href="biens.html?quartier=nice-meridia">Nice Méridia</a>
+        <a class="chip" href="biens.html?quartier=liberation">Libération</a>
+        <a class="chip" href="biens.html?quartier=riquier">Riquier</a>
+        <a class="chip" href="biens.html?quartier=saint-roch">Saint-Roch</a>
+      </div>
+    </section>
+
+    <!-- ===================== L'équipe ===================== -->
+    <section id="equipe" class="bg-dark-1 body-on-dark boxed-l pad-tb-128 flex-column gap-40" aria-labelledby="equipe-title">
+      <div class="grid-2 gap-40 flex-align-end reveal">
+        <div class="flex-column gap-16">
+          <p class="sub-title subtitle-on-dark">L'équipe</p>
+          <h2 id="equipe-title" class="title-2 heading-on-dark">Parlez directement à l'agent de votre&nbsp;quartier.</h2>
+        </div>
+        <div class="flex-column gap-16">
+          <p class="body-l">Pas de standard ni de formulaire à rallonge. Chaque agent répond lui-même, par téléphone ou sur WhatsApp, et suit votre projet jusqu'au&nbsp;bout.</p>
+          <a class="text-link link-on-dark" href="equipe.html">Découvrir l'équipe</a>
+        </div>
+      </div>
+      <ul class="grid-4 gap-24">
+        <li class="flex-column gap-16 reveal">
+          <figure class="agent-photo media ratio-4-5">
+            <img src="https://images.pexels.com/photos/37842959/pexels-photo-37842959.jpeg?auto=compress&cs=tinysrgb&w=700" alt="Portrait de Daniel Reyes" loading="lazy">
+          </figure>
+          <div class="flex-column gap-4">
+            <h3 class="title-5 heading-on-dark">Daniel Reyes</h3>
+            <p class="body-s detail-on-dark">Agent senior</p>
+            <p class="body-s body-on-dark">Vieux Nice · Le Port · Mont Boron</p>
+          </div>
+          <div class="push-end"><div class="flex-row flex-wrap flex-align-center gap-16"><a class="btn-outline-on-dark" href="https://wa.me/33639980111"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3.5 20.5l1.3-4.2A8.5 8.5 0 1 1 8 19.4z"/><path d="M9 8.5c0 3.5 3 6.5 6.5 6.5l1-1.6-2-1-1 .8a5 5 0 0 1-2.7-2.7l.8-1-1-2z"/></svg>WhatsApp</a><a class="text-link link-on-dark" href="tel:+33465710101">04 65 71 01 01</a></div></div>
+        </li>
+        <li class="flex-column gap-16 reveal">
+          <figure class="agent-photo media ratio-4-5">
+            <img src="https://images.pexels.com/photos/27086761/pexels-photo-27086761.jpeg?auto=compress&cs=tinysrgb&w=700" alt="Portrait de Priya Nair" loading="lazy">
+          </figure>
+          <div class="flex-column gap-4">
+            <h3 class="title-5 heading-on-dark">Priya Nair</h3>
+            <p class="body-s detail-on-dark">Agent senior</p>
+            <p class="body-s body-on-dark">Cimiez · Carré d'Or · Musiciens</p>
+          </div>
+          <div class="push-end"><div class="flex-row flex-wrap flex-align-center gap-16"><a class="btn-outline-on-dark" href="https://wa.me/33639980112"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3.5 20.5l1.3-4.2A8.5 8.5 0 1 1 8 19.4z"/><path d="M9 8.5c0 3.5 3 6.5 6.5 6.5l1-1.6-2-1-1 .8a5 5 0 0 1-2.7-2.7l.8-1-1-2z"/></svg>WhatsApp</a><a class="text-link link-on-dark" href="tel:+33465710102">04 65 71 01 02</a></div></div>
+        </li>
+        <li class="flex-column gap-16 reveal">
+          <figure class="agent-photo media ratio-4-5">
+            <img src="https://images.pexels.com/photos/13801445/pexels-photo-13801445.jpeg?auto=compress&cs=tinysrgb&w=700" alt="Portrait de Marcus Bell" loading="lazy">
+          </figure>
+          <div class="flex-column gap-4">
+            <h3 class="title-5 heading-on-dark">Marcus Bell</h3>
+            <p class="body-s detail-on-dark">Agent</p>
+            <p class="body-s body-on-dark">Jean Médecin · Nice Méridia · Libération</p>
+          </div>
+          <div class="push-end"><div class="flex-row flex-wrap flex-align-center gap-16"><a class="btn-outline-on-dark" href="https://wa.me/33639980113"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3.5 20.5l1.3-4.2A8.5 8.5 0 1 1 8 19.4z"/><path d="M9 8.5c0 3.5 3 6.5 6.5 6.5l1-1.6-2-1-1 .8a5 5 0 0 1-2.7-2.7l.8-1-1-2z"/></svg>WhatsApp</a><a class="text-link link-on-dark" href="tel:+33465710103">04 65 71 01 03</a></div></div>
+        </li>
+        <li class="flex-column gap-16 reveal">
+          <figure class="agent-photo media ratio-4-5">
+            <img src="https://images.pexels.com/photos/785667/pexels-photo-785667.jpeg?auto=compress&cs=tinysrgb&w=700" alt="Portrait de Sofia Lindqvist" loading="lazy">
+          </figure>
+          <div class="flex-column gap-4">
+            <h3 class="title-5 heading-on-dark">Sofia Lindqvist</h3>
+            <p class="body-s detail-on-dark">Agent</p>
+            <p class="body-s body-on-dark">Baumettes · Riquier · Saint-Roch</p>
+          </div>
+          <div class="push-end"><div class="flex-row flex-wrap flex-align-center gap-16"><a class="btn-outline-on-dark" href="https://wa.me/33639980114"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3.5 20.5l1.3-4.2A8.5 8.5 0 1 1 8 19.4z"/><path d="M9 8.5c0 3.5 3 6.5 6.5 6.5l1-1.6-2-1-1 .8a5 5 0 0 1-2.7-2.7l.8-1-1-2z"/></svg>WhatsApp</a><a class="text-link link-on-dark" href="tel:+33465710104">04 65 71 01 04</a></div></div>
+        </li>
+      </ul>
+    </section>
+
+    <!-- ===================== Journal ===================== -->
+    <section id="journal" class="bg-light-1 boxed-l pad-tb-128 grid-journal gap-40" aria-labelledby="journal-title">
+      <div class="sticky-top flex-column gap-16 reveal">
+        <p class="sub-title subtitle-on-light">Le journal</p>
+        <h2 id="journal-title" class="title-3 heading-on-light">Nos conseils, écrits depuis le&nbsp;terrain.</h2>
+        <a class="text-link link-on-light" href="journal.html">Tous les articles</a>
+      </div>
+      <div class="flex-column reveal">
+        <a class="journal-row pad-tb-24 gap-24" href="article-vieux-nice-ou-cimiez.html">
+          <figure class="media ratio-1-1 rounded-m"><img src="https://images.unsplash.com/photo-1728128528376-3909461029e3?auto=format&fit=crop&w=300&h=300&q=80" alt="" loading="lazy"></figure>
+          <div class="flex-column gap-8">
+            <span class="badge-1">Acheter</span>
+            <h3 class="title-5 heading-on-light">Acheter son premier appartement à Nice : ce qu'il faut&nbsp;savoir</h3>
+          </div>
+          <svg class="icon arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 12h16M14 6l6 6-6 6"/></svg>
+        </a>
+        <a class="journal-row pad-tb-24 gap-24" href="article-vieux-nice-ou-cimiez.html">
+          <figure class="media ratio-1-1 rounded-m"><img src="https://images.unsplash.com/photo-1661108887587-fc56774661c0?auto=format&fit=crop&w=300&h=300&q=80" alt="" loading="lazy"></figure>
+          <div class="flex-column gap-8">
+            <span class="badge-1">Vendre</span>
+            <h3 class="title-5 heading-on-light">Cinq choses qui influencent la valeur de votre&nbsp;appartement</h3>
+          </div>
+          <svg class="icon arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 12h16M14 6l6 6-6 6"/></svg>
+        </a>
+        <a class="journal-row pad-tb-24 gap-24" href="article-vieux-nice-ou-cimiez.html">
+          <figure class="media ratio-1-1 rounded-m"><img src="https://images.unsplash.com/photo-1754841226814-48b4872bb39f?auto=format&fit=crop&w=300&h=300&q=80" alt="" loading="lazy"></figure>
+          <div class="flex-column gap-8">
+            <span class="badge-1">Quartiers</span>
+            <h3 class="title-5 heading-on-light">Vieux Nice ou Cimiez : comment choisir son&nbsp;quartier</h3>
+          </div>
+          <svg class="icon arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 12h16M14 6l6 6-6 6"/></svg>
+        </a>
+      </div>
+    </section>
+
+    <!-- ===================== Estimation ===================== -->
+    <section id="estimation" class="bg-light-2 boxed-l pad-tb-128 grid-2 gap-40 flex-align-center reveal" aria-labelledby="estimation-title">
+      <div class="flex-column gap-24">
+        <p class="sub-title subtitle-on-light">Estimation</p>
+        <h2 id="estimation-title" class="title-2 heading-on-light">Combien vaut votre bien&nbsp;aujourd'hui ?</h2>
+        <p class="body-l body-on-light">Trois questions, puis l'agent de votre quartier vous rappelle personnellement. Chaque demande est suivie jusqu'à ce que nous vous ayons&nbsp;répondu.</p>
+        <div class="flex-row flex-align-center gap-16">
+          <img class="avatar-m" src="https://images.pexels.com/photos/13743891/pexels-photo-13743891.jpeg?auto=compress&cs=tinysrgb&w=320" alt="" loading="lazy">
+          <p class="body-m body-on-light">Vous préférez en parler de vive voix ?<br><a class="text-link link-on-light" href="tel:+33465710100">Appelez le bureau au 04 65 71 01 00</a></p>
+        </div>
+      </div>
+      <form class="card shadow-m pad-40 flex-column gap-24" action="estimation.html" method="get" data-prefill-form aria-label="Demande d'estimation, étape 1 sur 3">
+        <div class="flex-column gap-12">
+          <div class="flex-row flex-justify-between flex-align-center gap-12">
+            <p class="title-6 heading-on-light">Votre bien</p>
+            <p class="body-s detail-on-light">Étape 1 sur 3</p>
+          </div>
+          <div class="progress" aria-hidden="true"><span></span></div>
+        </div>
+        <div class="field">
+          <label for="adresse">Adresse du bien</label>
+          <input id="adresse" name="adresse" type="text" placeholder="Ex. 12 rue Rossini, Nice" autocomplete="street-address" required>
+        </div>
+        <div class="grid-2 gap-16">
+          <div class="field">
+            <label for="type">Type de bien</label>
+            <select id="type" name="type" required>
+              <option value="">Choisir</option>
+              <option>Appartement</option>
+              <option>Maison</option>
+              <option>Villa</option>
+              <option>Loft</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="surface">Surface (m²)</label>
+            <input id="surface" name="surface" type="number" inputmode="numeric" min="10" placeholder="Ex. 85" required>
+          </div>
+        </div>
+        <button class="btn-solid" type="submit">Continuer vers l'étape 2</button>
+        <p class="body-s detail-on-light">Ensuite : l'état du bien, puis vos coordonnées. Nous ne transmettons jamais vos informations.</p>
+      </form>
+    </section>
+
+  </main>
+
+  <!-- ===================== Footer ===================== -->
+  <footer class="bg-light-1 boxed-l">
+    <div class="grid-4 gap-40 pad-tb-48">
+      <div class="flex-column gap-16">
+        <a class="logo" href="index.html" aria-label="Larkline, accueil"><img src="images/larkline-logo.svg" alt="Larkline" width="169" height="36"></a>
+        <p class="body-s detail-on-light">Agence immobilière à Nice. Vente uniquement, un agent par client.</p>
+      </div>
+      <div class="flex-column gap-12">
+        <p class="sub-title subtitle-on-light">Le bureau</p>
+        <p class="body-m body-on-light">Rue de la Préfecture<br>06300 Nice, Vieux Nice</p>
+        <p class="body-s detail-on-light">Du lundi au vendredi, 9 h 00 à 18 h 00</p>
+      </div>
+      <div class="flex-column gap-12">
+        <p class="sub-title subtitle-on-light">Contact</p>
+        <a class="footer-link body-m" href="tel:+33465710100">04 65 71 01 00</a>
+        <a class="footer-link body-m" href="mailto:hello@larkline.example">hello@larkline.example</a>
+      </div>
+      <div class="flex-column gap-12">
+        <p class="sub-title subtitle-on-light">Le site</p>
+        <a class="footer-link body-m" href="biens.html">Biens à vendre</a>
+        <a class="footer-link body-m" href="estimation.html">Estimer mon bien</a>
+        <a class="footer-link body-m" href="equipe.html">L'équipe</a>
+        <a class="footer-link body-m" href="journal.html">Journal</a>
+      </div>
+    </div>
+    <div class="footer-bottom pad-tb-24 flex-row flex-wrap flex-justify-between gap-16 body-s detail-on-light">
+      <p>© 2026 Larkline Estates. Agence fictive, prototype v2.</p>
+      <p><a class="footer-link" href="mentions-legales.html">Mentions légales</a> · <a class="footer-link" href="confidentialite.html">Confidentialité</a> · <a class="footer-link" href="honoraires.html">Barème des honoraires</a></p>
+    </div>
+  </footer>
+
+</body>
+</html>

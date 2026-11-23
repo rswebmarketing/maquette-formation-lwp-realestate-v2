@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Biens à vendre à Nice · Larkline</title>
+  <meta name="description" content="Appartements, lofts, maisons et villas à vendre dans douze quartiers de Nice. Chaque bien est suivi par un seul agent, joignable directement.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,600;9..40,700&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+
+  <!-- ===================== Header ===================== -->
+  <header class="site-header boxed-l flex-row flex-align-center flex-justify-between gap-24">
+    <a class="logo" href="index.html" aria-label="Larkline, accueil">
+      <img src="images/larkline-logo.svg" alt="Larkline" width="169" height="36">
+    </a>
+    <input class="nav-toggle" type="checkbox" id="nav-toggle" aria-label="Ouvrir le menu">
+    <label class="nav-burger" for="nav-toggle" aria-hidden="true"><span></span><span></span><span></span></label>
+    <nav class="nav-menu gap-32" aria-label="Navigation principale">
+      <ul class="nav-links gap-24">
+        <li><a class="nav-link" href="biens.html" aria-current="page">Acheter</a></li>
+        <li><a class="nav-link" href="index.html#vendre">Vendre</a></li>
+        <li><a class="nav-link" href="index.html#quartiers">Quartiers</a></li>
+        <li><a class="nav-link" href="equipe.html">L'équipe</a></li>
+        <li><a class="nav-link" href="journal.html">Journal</a></li>
+      </ul>
+      <a class="nav-phone" href="tel:+33465710100">04 65 71 01 00</a>
+      <a class="btn-solid" href="estimation.html">Faire estimer mon bien</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="bg-light-1 boxed-l pad-tb-64 flex-column gap-24" aria-labelledby="biens-title">
+      <nav class="breadcrumb body-s flex-row flex-wrap gap-8" aria-label="Fil d'Ariane"><a href="index.html">Accueil</a><span class="detail-on-light">/</span><span class="heading-on-light">Biens à vendre</span></nav>
+      <div class="grid-2 gap-40 flex-align-end fade-up">
+        <div class="flex-column gap-16">
+          <p class="sub-title subtitle-on-light">Acheter à Nice</p>
+          <h1 id="biens-title" class="title-2 heading-on-light">Nos biens à vendre, quartier par&nbsp;quartier.</h1>
+        </div>
+        <p class="body-l body-on-light">Chaque bien est suivi par un seul agent, qui connaît la rue et l'immeuble. Une question ? Vous lui écrivez directement, sans passer par un&nbsp;formulaire.</p>
+      </div>
+    </section>
+
+    <section class="bg-light-1 boxed-l pad-tb-0 flex-column gap-32" aria-label="Filtrer les biens">
+      <form class="filter-bar card pad-24 gap-16" role="search" aria-label="Filtres" onsubmit="return false">
+        <div class="field">
+          <label for="f-quartier">Quartier</label>
+          <select id="f-quartier" data-filter="quartier"><option value="">Tous les quartiers</option><option value="vieux-nice">Vieux Nice</option><option value="le-port">Le Port</option><option value="mont-boron">Mont Boron</option><option value="cimiez">Cimiez</option><option value="carre-d-or">Carré d'Or</option><option value="musiciens">Musiciens</option><option value="jean-medecin">Jean Médecin</option><option value="nice-meridia">Nice Méridia</option><option value="liberation">Libération</option><option value="baumettes">Baumettes</option><option value="riquier">Riquier</option><option value="saint-roch">Saint-Roch</option></select>
+        </div>
+        <div class="field">
+          <label for="f-type">Type de bien</label>
+          <select id="f-type" data-filter="type"><option value="">Tous les types</option><option value="appartement">Appartement</option><option value="loft">Loft</option><option value="penthouse">Penthouse</option><option value="neuf">Neuf</option><option value="maison-de-ville">Maison de ville</option><option value="villa">Villa</option></select>
+        </div>
+        <div class="field">
+          <label for="f-agent">Agent</label>
+          <select id="f-agent" data-filter="agent"><option value="">Tous les agents</option><option value="daniel">Daniel Reyes</option><option value="priya">Priya Nair</option><option value="marcus">Marcus Bell</option><option value="sofia">Sofia Lindqvist</option></select>
+        </div>
+        <div class="field">
+          <label for="f-statut">Statut</label>
+          <select id="f-statut" data-filter="statut" data-default="a-vendre"><option value="">Tous les biens</option><option value="a-vendre" selected>À vendre</option><option value="sous-compromis">Sous compromis</option><option value="vendu">Vendus</option></select>
+        </div>
+        <button class="btn-outline" type="button" data-filter-reset>Réinitialiser</button>
+      </form>
+      <p class="body-m detail-on-light" aria-live="polite"><strong class="heading-on-light" data-filter-count data-singular="bien" data-plural="biens">12 biens</strong></p>
+    </section>
+
+    <section class="bg-light-1 boxed-l pad-tb-48" aria-label="Liste des biens">
+      <div class="grid-3 gap-24" data-filter-list>
+        
+        <a class="property-card card flex-column" href="bien-loft-vieux-nice.html" data-quartier="vieux-nice" data-type="loft" data-agent="daniel" data-statut="a-vendre">
+          <div class="media ratio-4-3">
+            <img src="https://images.pexels.com/photos/7174386/pexels-photo-7174386.jpeg?auto=compress&cs=tinysrgb&w=900" alt="Séjour lumineux sous poutres apparentes avec mezzanine" loading="lazy">
+            <span class="badge-2 media-badge">À vendre</span>
+          </div>
+          <div class="grow pad-24 flex-column gap-12">
+            <p class="body-s detail-on-light">Vieux Nice · Rue de la Préfecture</p>
+            <h3 class="title-6 heading-on-light">Loft dans les ruelles du Vieux&nbsp;Nice</h3>
+            <ul class="meta-list body-s flex-row flex-wrap gap-12"><li>3 chambres</li><li>2 salles de bain</li><li>195 m²</li></ul>
+            <div class="flex-row flex-align-center flex-justify-between gap-12 push-end">
+              <p class="price">1 350 000 €</p>
+              <span class="flex-row flex-align-center gap-8 body-s detail-on-light"><img class="avatar-s" src="https://images.pexels.com/photos/37842959/pexels-photo-37842959.jpeg?auto=compress&cs=tinysrgb&w=320" alt="" loading="lazy">Daniel</span>
+            </div>
+          </div>
+        </a>
+        <a class="property-card card flex-column" href="bien-loft-vieux-nice.html" data-quartier="le-port" data-type="loft" data-agent="daniel" data-statut="vendu">
+          <div class="media ratio-4-3">
+            <img src="https://images.pexels.com/photos/8089275/pexels-photo-8089275.jpeg?auto=compress&cs=tinysrgb&w=900" alt="Séjour avec mur de briques et grandes fenêtres" loading="lazy">
+            <span class="badge-3 media-badge">Vendu</span>
+          </div>
+          <div class="grow pad-24 flex-column gap-12">
+            <p class="body-s detail-on-light">Le Port · Rue Bonaparte</p>
+            <h3 class="title-6 heading-on-light">Loft sur le&nbsp;port</h3>
+            <ul class="meta-list body-s flex-row flex-wrap gap-12"><li>2 chambres</li><li>2 salles de bain</li><li>177 m²</li></ul>
+            <div class="flex-row flex-align-center flex-justify-between gap-12 push-end">
+              <p class="price">Vendu par Daniel</p>
+              <span class="flex-row flex-align-center gap-8 body-s detail-on-light"><img class="avatar-s" src="https://images.pexels.com/photos/37842959/pexels-photo-37842959.jpeg?auto=compress&cs=tinysrgb&w=320" alt="" loading="lazy">Daniel</span>
+            </div>
+          </div>
+        </a>
+        <a class="property-card card flex-column" href="bien-loft-vieux-nice.html" data-quartier="mont-boron" data-type="appartement" data-agent="daniel" data-statut="a-vendre">
+          <div class="media ratio-4-3">
+            <img src="https://images.unsplash.com/photo-1760204741315-abfc98ce3bf5?auto=format&fit=crop&w=900&h=675&q=80" alt="Chambre ouverte sur la mer par une grande baie vitrée" loading="lazy">
+            <span class="badge-2 media-badge">À vendre</span>
+          </div>
+          <div class="grow pad-24 flex-column gap-12">
+            <p class="body-s detail-on-light">Mont Boron · Boulevard Carnot</p>
+            <h3 class="title-6 heading-on-light">Appartement vue mer au Mont&nbsp;Boron</h3>
+            <ul class="meta-list body-s flex-row flex-wrap gap-12"><li>1 chambre</li><li>1 salle de bain</li><li>72 m²</li></ul>
+            <div class="flex-row flex-align-center flex-justify-between gap-12 push-end">
+              <p class="price">685 000 €</p>
+              <span class="flex-row flex-align-center gap-8 body-s detail-on-light"><img class="avatar-s" src="https://images.pexels.com/photos/37842959/pexels-photo-37842959.jpeg?auto=compress&cs=tinysrgb&w=320" alt="" loading="lazy">Daniel</span>
+            </div>
+          </div>
+        </a>
+        <a class="property-card card flex-column" href="bien-loft-vieux-nice.html" data-quartier="cimiez" data-type="appartement" data-agent="priya" data-statut="a-vendre">
+          <div class="media ratio-4-3">
+            <img src="https://images.unsplash.com/photo-1505409628601-edc9af17fda6?auto=format&fit=crop&w=900&h=675&q=80" alt="Salle à manger avec moulures, parquet et grandes fenêtres" loading="lazy">
+            <span class="badge-2 media-badge">À vendre</span>
+          </div>
+          <div class="grow pad-24 flex-column gap-12">
+            <p class="body-s detail-on-light">Cimiez · Boulevard de Cimiez</p>
+            <h3 class="title-6 heading-on-light">Appartement Belle Époque à&nbsp;Cimiez</h3>
+            <ul class="meta-list body-s flex-row flex-wrap gap-12"><li>3 chambres</li><li>2 salles de bain</li><li>172 m²</li></ul>
+            <div class="flex-row flex-align-center flex-justify-between gap-12 push-end">
+              <p class="price">1 050 000 €</p>
+              <span class="flex-row flex-align-center gap-8 body-s detail-on-light"><img class="avatar-s" src="https://images.pexels.com/photos/27086761/pexels-photo-27086761.jpeg?auto=compress&cs=tinysrgb&w=320" alt="" loading="lazy">Priya</span>
+            </div>
+          </div>
+        </a>
+        <a class="property-card card flex-column" href="bien-loft-vieux-nice.html" data-quartier="carre-d-or" data-type="appartement" data-agent="priya" data-statut="sous-compromis">
+          <div class="media ratio-4-3">
+            <img src="https://images.unsplash.com/photo-1642723972363-125c394b5a31?auto=format&fit=crop&w=900&h=675&q=80" alt="Salon classique avec mobilier ancien et hautes fenêtres" loading="lazy">
+            <span class="badge-3 media-badge">Sous compromis</span>
+          </div>
+          <div class="grow pad-24 flex-column gap-12">
+            <p class="body-s detail-on-light">Carré d'Or · Promenade des Anglais</p>
+            <h3 class="title-6 heading-on-light">Résidence sur la&nbsp;Promenade</h3>
+            <ul class="meta-list body-s flex-row flex-wrap gap-12"><li>2 chambres</li><li>2 salles de bain</li><li>130 m²</li></ul>
+            <div class="flex-row flex-align-center flex-justify-between gap-12 push-end">
+              <p class="price">1 490 000 €</p>
+              <span class="flex-row flex-align-center gap-8 body-s detail-on-light"><img class="avatar-s" src="https://images.pexels.com/photos/27086761/pexels-photo-27086761.jpeg?auto=compress&cs=tinysrgb&w=320" alt="" loading="lazy">Priya</span>
+            </div>
+          </div>
+        </a>
+        <a class="property-card card flex-column" href="bien-loft-vieux-nice.html" data-quartier="musiciens" data-type="appartement" data-agent="priya" data-statut="vendu">
+          <div class="media ratio-4-3">
+            <img src="https://images.unsplash.com/photo-1713832139677-a03a41b602e3?auto=format&fit=crop&w=900&h=675&q=80" alt="Séjour clair avec canapé gris et parquet" loading="lazy">
+            <span class="badge-3 media-badge">Vendu</span>
+          </div>
+          <div class="grow pad-24 flex-column gap-12">
+            <p class="body-s detail-on-light">Musiciens · Rue Rossini</p>
+            <h3 class="title-6 heading-on-light">Appartement aux&nbsp;Musiciens</h3>
+            <ul class="meta-list body-s flex-row flex-wrap gap-12"><li>2 chambres</li><li>1 salle de bain</li><li>102 m²</li></ul>
+            <div class="flex-row flex-align-center flex-justify-between gap-12 push-end">
+              <p class="price">Vendu par Priya</p>
+              <span class="flex-row flex-align-center gap-8 body-s detail-on-light"><img class="avatar-s" src="https://images.pexels.com/photos/27086761/pexels-photo-27086761.jpeg?auto=compress&cs=tinysrgb&w=320" alt="" loading="lazy">Priya</span>
+            </div>
+          </div>
+        </a>
+        <a class="property-card card flex-column" href="bien-loft-vieux-nice.html" data-quartier="jean-medecin" data-type="penthouse" data-agent="marcus" data-statut="a-vendre">
+          <div class="media ratio-4-3">
+            <img src="https://images.pexels.com/photos/5825715/pexels-photo-5825715.jpeg?auto=compress&cs=tinysrgb&w=900" alt="Séjour avec grande fenêtre, canapé et plantes" loading="lazy">
+            <span class="badge-2 media-badge">À vendre</span>
+          </div>
+          <div class="grow pad-24 flex-column gap-12">
+            <p class="body-s detail-on-light">Jean Médecin · Avenue Jean Médecin</p>
+            <h3 class="title-6 heading-on-light">Dernier étage en plein&nbsp;centre</h3>
+            <ul class="meta-list body-s flex-row flex-wrap gap-12"><li>2 chambres</li><li>2 salles de bain</li><li>116 m²</li></ul>
+            <div class="flex-row flex-align-center flex-justify-between gap-12 push-end">
+              <p class="price">760 000 €</p>
+              <span class="flex-row flex-align-center gap-8 body-s detail-on-light"><img class="avatar-s" src="https://images.pexels.com/photos/13801445/pexels-photo-13801445.jpeg?auto=compress&cs=tinysrgb&w=320" alt="" loading="lazy">Marcus</span>
+            </div>
+          </div>
+        </a>
+        <a class="property-card card flex-column" href="bien-loft-vieux-nice.html" data-quartier="nice-meridia" data-type="neuf" data-agent="marcus" data-statut="sous-compromis">
+          <div class="media ratio-4-3">
+            <img src="https://images.pexels.com/photos/6444263/pexels-photo-6444263.jpeg?auto=compress&cs=tinysrgb&w=900" alt="Séjour moderne avec escalier blanc" loading="lazy">
+            <span class="badge-3 media-badge">Sous compromis</span>
+          </div>
+          <div class="grow pad-24 flex-column gap-12">
+            <p class="body-s detail-on-light">Nice Méridia · Avenue Simone Veil</p>
+            <h3 class="title-6 heading-on-light">Appartement neuf à Nice&nbsp;Méridia</h3>
+            <ul class="meta-list body-s flex-row flex-wrap gap-12"><li>1 chambre</li><li>1 salle de bain</li><li>79 m²</li></ul>
+            <div class="flex-row flex-align-center flex-justify-between gap-12 push-end">
+              <p class="price">495 000 €</p>
+              <span class="flex-row flex-align-center gap-8 body-s detail-on-light"><img class="avatar-s" src="https://images.pexels.com/photos/13801445/pexels-photo-13801445.jpeg?auto=compress&cs=tinysrgb&w=320" alt="" loading="lazy">Marcus</span>
+            </div>
+          </div>
+        </a>
+        <a class="property-card card flex-column" href="bien-loft-vieux-nice.html" data-quartier="liberation" data-type="maison-de-ville" data-agent="marcus" data-statut="a-vendre">
+          <div class="media ratio-4-3">
+            <img src="https://images.pexels.com/photos/31405348/pexels-photo-31405348.jpeg?auto=compress&cs=tinysrgb&w=900" alt="Maison aux volets bleus et façade crème" loading="lazy">
+            <span class="badge-2 media-badge">À vendre</span>
+          </div>
+          <div class="grow pad-24 flex-column gap-12">
+            <p class="body-s detail-on-light">Libération · Avenue Borriglione</p>
+            <h3 class="title-6 heading-on-light">Maison de ville à&nbsp;Libération</h3>
+            <ul class="meta-list body-s flex-row flex-wrap gap-12"><li>5 chambres</li><li>3 salles de bain</li><li>334 m²</li></ul>
+            <div class="flex-row flex-align-center flex-justify-between gap-12 push-end">
+              <p class="price">1 790 000 €</p>
+              <span class="flex-row flex-align-center gap-8 body-s detail-on-light"><img class="avatar-s" src="https://images.pexels.com/photos/13801445/pexels-photo-13801445.jpeg?auto=compress&cs=tinysrgb&w=320" alt="" loading="lazy">Marcus</span>
+            </div>
+          </div>
+        </a>
+        <a class="property-card card flex-column" href="bien-loft-vieux-nice.html" data-quartier="baumettes" data-type="villa" data-agent="sofia" data-statut="a-vendre">
+          <div class="media ratio-4-3">
+            <img src="https://images.pexels.com/photos/25323129/pexels-photo-25323129.jpeg?auto=compress&cs=tinysrgb&w=900" alt="Villa Belle Époque blanche entourée de palmiers" loading="lazy">
+            <span class="badge-2 media-badge">À vendre</span>
+          </div>
+          <div class="grow pad-24 flex-column gap-12">
+            <p class="body-s detail-on-light">Baumettes · Avenue des Baumettes</p>
+            <h3 class="title-6 heading-on-light">Villa Belle Époque aux&nbsp;Baumettes</h3>
+            <ul class="meta-list body-s flex-row flex-wrap gap-12"><li>4 chambres</li><li>4 salles de bain</li><li>297 m²</li></ul>
+            <div class="flex-row flex-align-center flex-justify-between gap-12 push-end">
+              <p class="price">2 650 000 €</p>
+              <span class="flex-row flex-align-center gap-8 body-s detail-on-light"><img class="avatar-s" src="https://images.pexels.com/photos/785667/pexels-photo-785667.jpeg?auto=compress&cs=tinysrgb&w=320" alt="" loading="lazy">Sofia</span>
+            </div>
+          </div>
+        </a>
+        <a class="property-card card flex-column" href="bien-loft-vieux-nice.html" data-quartier="riquier" data-type="loft" data-agent="sofia" data-statut="a-vendre">
+          <div class="media ratio-4-3">
+            <img src="https://images.pexels.com/photos/8089269/pexels-photo-8089269.jpeg?auto=compress&cs=tinysrgb&w=900" alt="Grand séjour avec mur de briques et canapé blanc" loading="lazy">
+            <span class="badge-2 media-badge">À vendre</span>
+          </div>
+          <div class="grow pad-24 flex-column gap-12">
+            <p class="body-s detail-on-light">Riquier · Boulevard de Riquier</p>
+            <h3 class="title-6 heading-on-light">Loft dans un ancien&nbsp;atelier</h3>
+            <ul class="meta-list body-s flex-row flex-wrap gap-12"><li>2 chambres</li><li>2 salles de bain</li><li>144 m²</li></ul>
+            <div class="flex-row flex-align-center flex-justify-between gap-12 push-end">
+              <p class="price">745 000 €</p>
+              <span class="flex-row flex-align-center gap-8 body-s detail-on-light"><img class="avatar-s" src="https://images.pexels.com/photos/785667/pexels-photo-785667.jpeg?auto=compress&cs=tinysrgb&w=320" alt="" loading="lazy">Sofia</span>
+            </div>
+          </div>
+        </a>
+        <a class="property-card card flex-column" href="bien-loft-vieux-nice.html" data-quartier="saint-roch" data-type="appartement" data-agent="sofia" data-statut="a-vendre">
+          <div class="media ratio-4-3">
+            <img src="https://images.pexels.com/photos/6077367/pexels-photo-6077367.jpeg?auto=compress&cs=tinysrgb&w=900" alt="Pièce lumineuse avec mur de briques et parquet" loading="lazy">
+            <span class="badge-2 media-badge">À vendre</span>
+          </div>
+          <div class="grow pad-24 flex-column gap-12">
+            <p class="body-s detail-on-light">Saint-Roch · Route de Turin</p>
+            <h3 class="title-6 heading-on-light">Deux-pièces à&nbsp;Saint-Roch</h3>
+            <ul class="meta-list body-s flex-row flex-wrap gap-12"><li>1 chambre</li><li>1 salle de bain</li><li>65 m²</li></ul>
+            <div class="flex-row flex-align-center flex-justify-between gap-12 push-end">
+              <p class="price">275 000 €</p>
+              <span class="flex-row flex-align-center gap-8 body-s detail-on-light"><img class="avatar-s" src="https://images.pexels.com/photos/785667/pexels-photo-785667.jpeg?auto=compress&cs=tinysrgb&w=320" alt="" loading="lazy">Sofia</span>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="empty-state pad-48 flex-column flex-align-center gap-12 text-center" data-filter-empty hidden>
+        <h2 class="title-5 heading-on-light">Aucun bien ne correspond pour l'instant.</h2>
+        <p class="body-m body-on-light max-text">Dites à l'agent du quartier ce que vous cherchez : il vous prévient dès qu'un bien correspond, souvent avant sa mise en ligne.</p>
+        <a class="text-link link-on-light" href="equipe.html">Trouver l'agent du quartier</a>
+      </div>
+    </section>
+
+    <section class="bg-light-2 boxed-l pad-tb-96 reveal" aria-label="Vous vendez un bien à Nice ?">
+      <div class="card shadow-s pad-48 grid-split gap-40 flex-align-center">
+        <div class="flex-column gap-12">
+          <h2 class="title-3 heading-on-light">Vous vendez un bien à Nice&nbsp;?</h2>
+          <p class="body-l body-on-light">L'agent qui connaît votre quartier vient le voir et vous explique son prix, ventes récentes de la rue à l'appui.</p>
+        </div>
+        <div class="flex-row flex-wrap flex-align-center flex-justify-end gap-24">
+          <a class="text-link link-on-light" href="tel:+33465710100">04 65 71 01 00</a>
+          <a class="btn-solid" href="estimation.html">Faire estimer mon bien</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===================== Footer ===================== -->
+  <footer class="bg-light-1 boxed-l">
+    <div class="grid-4 gap-40 pad-tb-48">
+      <div class="flex-column gap-16">
+        <a class="logo" href="index.html" aria-label="Larkline, accueil"><img src="images/larkline-logo.svg" alt="Larkline" width="169" height="36"></a>
+        <p class="body-s detail-on-light">Agence immobilière à Nice. Vente uniquement, un agent par client.</p>
+      </div>
+      <div class="flex-column gap-12">
+        <p class="sub-title subtitle-on-light">Le bureau</p>
+        <p class="body-m body-on-light">Rue de la Préfecture<br>06300 Nice, Vieux Nice</p>
+        <p class="body-s detail-on-light">Du lundi au vendredi, 9 h 00 à 18 h 00</p>
+      </div>
+      <div class="flex-column gap-12">
+        <p class="sub-title subtitle-on-light">Contact</p>
+        <a class="footer-link body-m" href="tel:+33465710100">04 65 71 01 00</a>
+        <a class="footer-link body-m" href="mailto:hello@larkline.example">hello@larkline.example</a>
+      </div>
+      <div class="flex-column gap-12">
+        <p class="sub-title subtitle-on-light">Le site</p>
+        <a class="footer-link body-m" href="biens.html">Biens à vendre</a>
+        <a class="footer-link body-m" href="estimation.html">Estimer mon bien</a>
+        <a class="footer-link body-m" href="equipe.html">L'équipe</a>
+        <a class="footer-link body-m" href="journal.html">Journal</a>
+      </div>
+    </div>
+    <div class="footer-bottom pad-tb-24 flex-row flex-wrap flex-justify-between gap-16 body-s detail-on-light">
+      <p>© 2026 Larkline Estates. Agence fictive, prototype v2.</p>
+      <p><a class="footer-link" href="mentions-legales.html">Mentions légales</a> · <a class="footer-link" href="confidentialite.html">Confidentialité</a> · <a class="footer-link" href="honoraires.html">Barème des honoraires</a></p>
+    </div>
+  </footer>
+
+</body>
+</html>

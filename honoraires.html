@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Barème des honoraires · Larkline</title>
+  <meta name="description" content="Barème des honoraires de transaction de l'agence Larkline à Nice.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,600;9..40,700&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+
+  <!-- ===================== Header ===================== -->
+  <header class="site-header boxed-l flex-row flex-align-center flex-justify-between gap-24">
+    <a class="logo" href="index.html" aria-label="Larkline, accueil">
+      <img src="images/larkline-logo.svg" alt="Larkline" width="169" height="36">
+    </a>
+    <input class="nav-toggle" type="checkbox" id="nav-toggle" aria-label="Ouvrir le menu">
+    <label class="nav-burger" for="nav-toggle" aria-hidden="true"><span></span><span></span><span></span></label>
+    <nav class="nav-menu gap-32" aria-label="Navigation principale">
+      <ul class="nav-links gap-24">
+        <li><a class="nav-link" href="biens.html">Acheter</a></li>
+        <li><a class="nav-link" href="index.html#vendre">Vendre</a></li>
+        <li><a class="nav-link" href="index.html#quartiers">Quartiers</a></li>
+        <li><a class="nav-link" href="equipe.html">L'équipe</a></li>
+        <li><a class="nav-link" href="journal.html">Journal</a></li>
+      </ul>
+      <a class="nav-phone" href="tel:+33465710100">04 65 71 01 00</a>
+      <a class="btn-solid" href="estimation.html">Faire estimer mon bien</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="bg-light-1 boxed-l pad-tb-64 flex-column gap-24" aria-labelledby="page-title">
+      <nav class="breadcrumb body-s flex-row flex-wrap gap-8" aria-label="Fil d'Ariane"><a href="index.html">Accueil</a><span class="detail-on-light">/</span><span class="heading-on-light">Barème des honoraires</span></nav>
+      <h1 id="page-title" class="title-2 heading-on-light">Barème des honoraires</h1>
+      <p class="body-l body-on-light max-text-l">Nos honoraires de transaction, affichés toutes taxes comprises comme la loi l'impose. Le barème ci-dessous est à valider par l'agence avant la mise en ligne.</p>
+    </section>
+    <section class="bg-light-1 boxed-l pad-tb-48 grid-toc gap-40">
+      <nav class="toc sticky-top card pad-24 flex-column gap-12" aria-label="Sommaire">
+        <p class="sub-title subtitle-on-light">Sommaire</p>
+        <ol class="flex-column gap-8"><li><a class="body-s" href="#honoraires-de-vente">Honoraires de vente</a></li><li><a class="body-s" href="#estimation">Estimation</a></li><li><a class="body-s" href="#location-et-gestion">Location et gestion</a></li></ol>
+      </nav>
+      <div class="prose"><h2 id="honoraires-de-vente">Honoraires de vente</h2><table class="compare-table"><thead><tr><th scope="col">Prix de vente</th><th scope="col">Honoraires TTC</th></tr></thead><tbody>
+<tr><td>Jusqu'à 300 000 €</td><td><span class="todo">à compléter</span></td></tr>
+<tr><td>De 300 001 € à 1 000 000 €</td><td><span class="todo">à compléter</span></td></tr>
+<tr><td>Au-delà de 1 000 000 €</td><td><span class="todo">à compléter</span></td></tr></tbody></table>
+<p>Les honoraires sont calculés sur le prix de vente et incluent la TVA au taux de 20 %. Leur charge (vendeur ou acquéreur) est indiquée sur chaque annonce : <span class="todo">à compléter</span>.</p><h2 id="estimation">Estimation</h2><p>Conditions de l'estimation réalisée par l'agent de votre quartier : <span class="todo">à compléter</span>.</p><h2 id="location-et-gestion">Location et gestion</h2><p>Larkline ne propose ni location ni gestion locative : nous nous consacrons uniquement à la vente.</p>
+        <p class="body-s detail-on-light">Dernière mise à jour : novembre 2026.</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===================== Footer ===================== -->
+  <footer class="bg-light-1 boxed-l">
+    <div class="grid-4 gap-40 pad-tb-48">
+      <div class="flex-column gap-16">
+        <a class="logo" href="index.html" aria-label="Larkline, accueil"><img src="images/larkline-logo.svg" alt="Larkline" width="169" height="36"></a>
+        <p class="body-s detail-on-light">Agence immobilière à Nice. Vente uniquement, un agent par client.</p>
+      </div>
+      <div class="flex-column gap-12">
+        <p class="sub-title subtitle-on-light">Le bureau</p>
+        <p class="body-m body-on-light">Rue de la Préfecture<br>06300 Nice, Vieux Nice</p>
+        <p class="body-s detail-on-light">Du lundi au vendredi, 9 h 00 à 18 h 00</p>
+      </div>
+      <div class="flex-column gap-12">
+        <p class="sub-title subtitle-on-light">Contact</p>
+        <a class="footer-link body-m" href="tel:+33465710100">04 65 71 01 00</a>
+        <a class="footer-link body-m" href="mailto:hello@larkline.example">hello@larkline.example</a>
+      </div>
+      <div class="flex-column gap-12">
+        <p class="sub-title subtitle-on-light">Le site</p>
+        <a class="footer-link body-m" href="biens.html">Biens à vendre</a>
+        <a class="footer-link body-m" href="estimation.html">Estimer mon bien</a>
+        <a class="footer-link body-m" href="equipe.html">L'équipe</a>
+        <a class="footer-link body-m" href="journal.html">Journal</a>
+      </div>
+    </div>
+    <div class="footer-bottom pad-tb-24 flex-row flex-wrap flex-justify-between gap-16 body-s detail-on-light">
+      <p>© 2026 Larkline Estates. Agence fictive, prototype v2.</p>
+      <p><a class="footer-link" href="mentions-legales.html">Mentions légales</a> · <a class="footer-link" href="confidentialite.html">Confidentialité</a> · <a class="footer-link" href="honoraires.html">Barème des honoraires</a></p>
+    </div>
+  </footer>
+
+</body>
+</html>
