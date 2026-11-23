@@ -104,6 +104,7 @@
   --slide-zoom: 1.12;
   --icon-button: 3rem;
   --toc-width: 15rem;
+  --agent-photo-h: 22rem;
   --prose-width: 42rem;
 
   /* Motion */
@@ -234,11 +235,12 @@ button, input, select { font: inherit; }
 .btn-solid { color: var(--primary-light-1); background-color: var(--primary-brand-1); border-color: var(--primary-brand-1); }
 .btn-solid:hover { color: var(--primary-light-1); background-color: var(--primary-brand-2); border-color: var(--primary-brand-2); }
 .btn-outline { color: var(--primary-brand-2); background-color: transparent; border-color: var(--primary-brand-1); }
-.btn-outline:hover { color: var(--primary-dark-1); background-color: var(--primary-brand-1); }
-.btn-solid-on-dark { color: var(--primary-dark-1); background-color: var(--primary-light-1); border-color: var(--primary-light-1); }
-.btn-solid-on-dark:hover { background-color: var(--primary-light-2); border-color: var(--primary-light-2); }
+/* Secondary buttons: never black text; hover = orange fill with light text, like the primary button */
+.btn-outline:hover { color: var(--primary-light-1); background-color: var(--primary-brand-1); }
+.btn-solid-on-dark { color: var(--primary-brand-2); background-color: var(--primary-light-1); border-color: var(--primary-light-1); }
+.btn-solid-on-dark:hover { color: var(--primary-light-1); background-color: var(--primary-brand-1); border-color: var(--primary-brand-1); }
 .btn-outline-on-dark { color: var(--primary-light-1); background-color: transparent; border-color: var(--primary-light-1); }
-.btn-outline-on-dark:hover { color: var(--primary-dark-1); background-color: var(--primary-light-1); }
+.btn-outline-on-dark:hover { color: var(--primary-light-1); background-color: var(--primary-brand-1); border-color: var(--primary-brand-1); }
 
 /* Layout: boxed containers */
 .boxed-s { padding-left: max(5%, calc((100% - 47.5rem) / 2)); padding-right: max(5%, calc((100% - 47.5rem) / 2)); }
@@ -500,14 +502,14 @@ button, input, select { font: inherit; }
   width: var(--icon-button);
   height: var(--icon-button);
   border-radius: 9999px;
-  border: var(--size-1) solid var(--primary-light-3);
+  border: var(--size-1) solid var(--primary-brand-1);
   background: var(--primary-light-1);
-  color: var(--primary-dark-1);
+  color: var(--primary-brand-2);
   cursor: pointer;
   transition: background-color var(--duration-s) var(--ease), border-color var(--duration-s) var(--ease), color var(--duration-s) var(--ease), opacity var(--duration-s) var(--ease);
 }
 .icon-button:hover { background: var(--primary-brand-1); border-color: var(--primary-brand-1); color: var(--primary-light-1); }
-.icon-button:disabled { opacity: 0.35; cursor: default; background: var(--primary-light-1); border-color: var(--primary-light-3); color: var(--primary-dark-1); }
+.icon-button:disabled { opacity: 0.35; cursor: default; background: var(--primary-light-1); border-color: var(--primary-brand-1); color: var(--primary-brand-2); }
 .scroller::-webkit-scrollbar { display: none; }
 .scroller > * { scroll-snap-align: start; }
 .property-card {
@@ -644,9 +646,20 @@ a.chip:hover, button.chip:hover { border-color: var(--primary-brand-1); }
 .empty-state { border: var(--size-1) dashed var(--primary-light-3); border-radius: var(--radius-m); }
 
 /* Team page */
-.agent-profile { display: grid; grid-template-columns: minmax(0, 2fr) minmax(0, 3fr); overflow: hidden; }
-.agent-profile .media { height: 100%; }
-.agent-profile .media img { object-position: top; }
+.agent-profile { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); overflow: hidden; scroll-margin-top: calc(var(--header-height) + var(--size-24)); }
+/* Same photo size for every agent: equal-height rows + square minimum */
+.agent-list { display: grid; grid-auto-rows: 1fr; }
+.agent-profile .media { width: 100%; height: 100%; min-height: var(--agent-photo-h); }
+/* The photo fills the frame without pushing the row taller; faces kept in view */
+.agent-profile .media img { position: absolute; inset: 0; }
+.agent-profile.is-flipped { grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); }
+.agent-profile.is-flipped .media { order: 2; }
+.agent-profile-body { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); align-items: start; align-self: center; }
+/* Home team cards link to the agent's profile on the team page */
+.agent-link { text-decoration: none; color: inherit; }
+.agent-link:hover h3 { color: var(--primary-brand-1); }
+.agent-link h3 { transition: color var(--duration-s) var(--ease); }
+.agent-profile .media img { object-position: 50% 25%; }
 .mini-list li { border-top: var(--size-1) solid var(--primary-light-3); }
 .mini-list a { text-decoration: none; color: var(--primary-dark-1); }
 .mini-list li > span { white-space: nowrap; }
@@ -731,8 +744,10 @@ a.chip:hover, button.chip:hover { border-color: var(--primary-brand-1); }
 @media (max-width: 1080px) {
   .nav-phone { display: none; }
   .filter-bar { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .agent-profile { grid-template-columns: minmax(0, 1fr); }
-  .agent-profile .media { height: auto; aspect-ratio: 4 / 3; }
+  .agent-profile, .agent-profile.is-flipped { grid-template-columns: minmax(0, 1fr); }
+  .agent-list { grid-auto-rows: auto; }
+  .agent-profile .media { height: auto; min-height: 0; aspect-ratio: 3 / 2; }
+  .agent-profile.is-flipped .media { order: 0; }
   .grid-4 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 @media (max-width: 900px) {
@@ -762,6 +777,7 @@ a.chip:hover, button.chip:hover { border-color: var(--primary-brand-1); }
   .nav-links { flex-direction: column; align-items: flex-start; }
   .hero-intro, .grid-split, .grid-split-r, .grid-aside, .grid-journal, .grid-2, .grid-toc { grid-template-columns: minmax(0, 1fr); }
   .order-first-m { order: -1; }
+  .agent-profile-body { grid-template-columns: minmax(0, 1fr); }
   .sticky-top, .agent-aside { position: static; }
   .price-block { text-align: start; }
   .gallery { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); grid-template-rows: var(--gallery-main-m) var(--gallery-small-m); }
